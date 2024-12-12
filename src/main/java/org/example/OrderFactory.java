@@ -5,13 +5,13 @@ public class OrderFactory {
         Class createdClass = null;
         Object createdObject = null;
         try {
-            createdClass = Class.forName("org.example.Order" + order);
+            createdClass = Class.forName("org.example." + order + "Order" );
             createdObject = createdClass.newInstance();
         } catch (Exception ex) {
             throw new IllegalArgumentException("Inexistent order!");
         }
         if (!(createdObject instanceof IOrder)) {
-            throw new IllegalArgumentException("Invalid order");
+            throw new IllegalArgumentException("Invalid order!");
         }
         return (IOrder) createdObject;
     }

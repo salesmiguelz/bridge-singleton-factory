@@ -1,7 +1,7 @@
 package org.example;
 
-public class FrenchFriesOrder {
-    public String ready(){
+public class FrenchFriesOrder implements  IOrder{
+    public String make(){
         return "The french fries are ready!";
     }
 
